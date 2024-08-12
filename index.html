@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntax Error Team - Networking CCNA Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .quiz-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+        .quiz-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .quiz-header img {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .question h3 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .question input {
+            margin-right: 10px;
+        }
+        #submit-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #submit-section button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #submit-section button:hover {
+            background-color: #45a049;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            text-align: center;
+            color: #333;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <img src="SET_Team-removebg.png" alt="Syntax Error Team">
+            <h2>Networking CCNA Quiz</h2>
+        </div>
+
+        <form id="quiz-form" action="https://formspree.io/f/mldrnapd" method="POST" onsubmit="submitQuiz(event)">
+            <input type="text" id="user-name" name="name" placeholder="Your Name" required>
+
+            <div class="question">
+                <h3>1. Which one of the following is not a function of the network layer?</h3>
+                <input type="radio" name="q1" value="a" required> Congestion control<br>
+                <input type="radio" name="q1" value="b" required> Error control<br>
+                <input type="radio" name="q1" value="c" required> Routing<br>
+                <input type="radio" name="q1" value="d" required> Inter-networking<br>
+            </div>
+
+            <!-- Repeat for all other questions -->
+            <div class="question">
+                <h3>2. What is the term for an endpoint of an inter-process communication flow across a computer network?</h3>
+                <input type="radio" name="q2" value="a" required> Port<br>
+                <input type="radio" name="q2" value="b" required> MAC<br>
+                <input type="radio" name="q2" value="c" required> Socket<br>
+                <input type="radio" name="q2" value="d" required> Pipe<br>
+            </div>
+
+            <div class="question">
+                <h3>3. Which layer does the data link layer take packets from and encapsulate them into frames for transmission?</h3>
+                <input type="radio" name="q3" value="a" required> Transport layer<br>
+                <input type="radio" name="q3" value="b" required> Application layer<br>
+                <input type="radio" name="q3" value="c" required> Network layer<br>
+                <input type="radio" name="q3" value="d" required> Physical layer<br>
+            </div>
+
+            <div class="question">
+                <h3>4. Which of these is not a network edge device?</h3>
+                <input type="radio" name="q4" value="a" required> Switch<br>
+                <input type="radio" name="q4" value="b" required> PC<br>
+                <input type="radio" name="q4" value="c" required> Smartphones<br>
+                <input type="radio" name="q4" value="d" required> Servers<br>
+            </div>
+
+            <div class="question">
+                <h3>5. Which topology requires a multipoint connection?</h3>
+                <input type="radio" name="q5" value="a" required> Ring<br>
+                <input type="radio" name="q5" value="b" required> Bus<br>
+                <input type="radio" name="q5" value="c" required> Star<br>
+                <input type="radio" name="q5" value="d" required> Mesh<br>
+            </div>
+
+            <div class="question">
+                <h3>6. When discussing IDS/IPS, what is a signature?</h3>
+                <input type="radio" name="q6" value="a" required> It refers to “normal,” baseline network behavior<br>
+                <input type="radio" name="q6" value="b" required> It is used to authorize the users on a network<br>
+                <input type="radio" name="q6" value="c" required> An electronic signature used to authenticate the identity of a user on the network<br>
+                <input type="radio" name="q6" value="d" required> Attack-definition file<br>
+            </div>
+
+            <div class="question">
+                <h3>7. What is the term for the data communication system within a building or campus?</h3>
+                <input type="radio" name="q7" value="a" required> MAN<br>
+                <input type="radio" name="q7" value="b" required> LAN<br>
+                <input type="radio" name="q7" value="c" required> PAN<br>
+                <input type="radio" name="q7" value="d" required> WAN<br>
+            </div>
+
+            <div class="question">
+                <h3>8. Which network topology requires a central controller or hub?</h3>
+                <input type="radio" name="q8" value="a" required> Ring<br>
+                <input type="radio" name="q8" value="b" required> Bus<br>
+                <input type="radio" name="q8" value="c" required> Star<br>
+                <input type="radio" name="q8" value="d" required> Mesh<br>
+            </div>
+
+            <div class="question">
+                <h3>9. Which layer provides the services to the user?</h3>
+                <input type="radio" name="q9" value="a" required> Physical layer<br>
+                <input type="radio" name="q9" value="b" required> Presentation layer<br>
+                <input type="radio" name="q9" value="c" required> Session layer<br>
+                <input type="radio" name="q9" value="d" required> Application layer<br>
+            </div>
+
+            <div class="question">
+                <h3>10. Which of the following allows you to connect and login to a remote computer?</h3>
+                <input type="radio" name="q10" value="a" required> SMTP<br>
+                <input type="radio" name="q10" value="b" required> HTTP<br>
+                <input type="radio" name="q10" value="c" required> FTP<br>
+                <input type="radio" name="q10" value="d" required> Telnet<br>
+            </div>
+
+            <div class="question">
+                <h3>11. TCP groups a number of bytes together into a packet called _______</h3>
+                <input type="radio" name="q11" value="a" required> Packet<br>
+                <input type="radio" name="q11" value="b" required> Buffer<br>
+                <input type="radio" name="q11" value="c" required> Segment<br>
+                <input type="radio" name="q11" value="d" required> Stack<br>
+            </div>
+
+            <div class="question">
+                <h3>12. Which of the OSI layers deals with the shape of connectors for network connections?</h3>
+                <input type="radio" name="q12" value="a" required> Physical<br>
+                <input type="radio" name="q12" value="b" required> Data Link<br>
+                <input type="radio" name="q12" value="c" required> Network<br>
+                <input type="radio" name="q12" value="d" required> Transport<br>
+            </div>
+
+            <div class="question">
+                <h3>13. What is the primary value of the OSI network model?</h3>
+                <input type="radio" name="q13" value="a" required> OSI networks are used in the southern hemisphere<br>
+                <input type="radio" name="q13" value="b" required> The OSI approach can be used to analyze many different network models<br>
+                <input type="radio" name="q13" value="c" required> OSI networks make better use of limited bandwidth<br>
+                <input type="radio" name="q13" value="d" required> OSI networks are more secure<br>
+            </div>
+
+            <div class="question">
+                <h3>14. What doesn't change when transmitting data from end to end?</h3>
+                <input type="radio" name="q14" value="a" required> Destination IP<br>
+                <input type="radio" name="q14" value="b" required> Destination MAC<br>
+                <input type="radio" name="q14" value="c" required> Source MAC<br>
+                <input type="radio" name="q14" value="d" required> Socket number<br>
+            </div>
+
+            <div class="question">
+                <h3>15. SSH belongs to which layer?</h3>
+                <input type="radio" name="q15" value="a" required> Network<br>
+                <input type="radio" name="q15" value="b" required> Transport<br>
+                <input type="radio" name="q15" value="c" required> Application<br>
+                <input type="radio" name="q15" value="d" required> Network access<br>
+            </div>
+
+            <div id="submit-section">
+                <button type="submit">Submit Quiz</button>
+            </div>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function submitQuiz(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+
+            const correctAnswers = {
+                q1: 'b',
+                q2: 'c',
+                q3: 'c',
+                q4: 'a',
+                q5: 'b',
+                q6: 'd',
+                q7: 'b',
+                q8: 'c',
+                q9: 'd',
+                q10: 'd',
+                q11: 'c',
+                q12: 'a',
+                q13: 'b',
+                q14: 'a',
+                q15: 'c',
+            };
+
+            let score = 0;
+            let userAnswers = {};
+            const form = document.getElementById('quiz-form');
+            const formData = new FormData(form);
+
+            for (let [key, value] of formData.entries()) {
+                userAnswers[key] = value;
+                if (value === correctAnswers[key]) {
+                    score++;
+                }
+            }
+
+            const userName = document.getElementById('user-name').value;
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `Thank you ${userName}, your score is ${score}/15`;
+
+            // Append the score and answers to the form data
+            formData.append("score", score);
+            formData.append("user_answers", JSON.stringify(userAnswers));
+
+            // Submit the form using Formspree
+            fetch(form.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    resultDiv.innerHTML += `<br>Your answers have been successfully submitted.`;
+                } else {
+                    resultDiv.innerHTML += `<br>There was an error submitting your answers.`;
+                }
+            }).catch(error => {
+                resultDiv.innerHTML += `<br>There was an error submitting your answers.`;
+            });
+        }
+    </script>
+</body>
+</html>
